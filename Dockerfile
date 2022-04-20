@@ -16,6 +16,7 @@ RUN yarn install --force
 
 RUN chown -R node:node /app
 
-USER 1000
+# force root to allow binding port 80 
+USER 0
 
 CMD [ "yarn", "start" ]
